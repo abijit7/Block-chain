@@ -27,6 +27,7 @@ public class Main {
     blockChain.add(new Block("third block",blockChain.get(blockChain.size()-1).hash));
         System.out.println("trying to mine block 3");
         blockChain.get(2).mineBlock(difficulty);
+        blockChain.add(new Block("fourth block",blockChain.get(blockChain.size()-1).hash));
     String blockChainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockChain);
         System.out.println(blockChainJson);
     }
